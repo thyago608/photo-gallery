@@ -22,7 +22,14 @@ export const Content = styled.main`
 
 export const ContainerAnimation = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 80vh;
+`;
+
+export const PhotoList = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.65rem;
 `;

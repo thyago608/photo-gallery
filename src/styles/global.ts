@@ -24,4 +24,12 @@ export const GlobalStyle = createGlobalStyle`
             font-size: 87.5%;
         }
     }
+
+    ul{
+        list-style: none;
+    }
+
+    a{
+        text-decoration: none;
+    }
 `;
