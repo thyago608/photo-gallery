@@ -19,3 +19,10 @@ export const Content = styled.main`
   max-width: 980px;
   padding: 2rem 0;
 `;
+
+export const ContainerAnimation = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+`;

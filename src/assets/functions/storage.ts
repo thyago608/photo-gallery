@@ -1,23 +1,27 @@
-import { Photo } from '../types/Photo';
-import { storage } from '../../services/firebase';
-import { ref, listAll, getDownloadURL} from 'firebase/storage';
+import { Photo } from "../types/Photo";
+import { storage } from "../../services/firebase";
+import { ref, listAll, getDownloadURL } from "firebase/storage";
 
 export const getAllImages = async () => {
-    //Referênciando uma pasta dentro Storage
-    const imagesFolder = ref(storage, "images");
+  let list: Photo[] = [];
 
-    //Pegando os arquivos de uma pasta
-    const photos = await listAll(imagesFolder);
+  //Referênciando uma pasta dentro Storage
+  const imagesFolder = ref(storage, "images");
 
-    const photoList = photos.items.map(async (photo) => {
-      const photoURL = await getDownloadURL(photo);
+  //Pegando os arquivos de uma pasta
+  const photos = await listAll(imagesFolder);
 
-      return {
-          name:photo.name,
-          url: photoURL
-      };
+  for (let i in photos.items) {
+    //Gerando um URL para uma imagem
+    let photoURL = await getDownloadURL(photos.items[i]);
+
+    list.push({
+      name: photos.items[i].name,
+      url: photoURL,
     });
+  }
 
-    return photoList;
+  return list;
+};
 
-}
+//for in
