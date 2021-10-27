@@ -1,9 +1,16 @@
-import { Container } from './styles';
+import { Container, Content, Header } from "./styles";
 
-export function Home(){
-    return(
-        <Container>
-            <h1>Thyago Ribeiro</h1>
-        </Container>
-    );
+export function Home() {
+  return (
+    <Container>
+      <Content>
+        <Header>
+          <h1>Galeria de Fotos</h1>
+        </Header>
+
+        {/* Área de Upload */}
+        {/* Lista de Fotos */}
+      </Content>
+    </Container>
+  );
 }
