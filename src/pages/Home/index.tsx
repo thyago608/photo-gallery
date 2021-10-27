@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Lottie from "lottie-react-web";
+import { PhotoItem } from "../../components/PhotoItem";
 import { Photo } from "../../assets/types/Photo";
 import { getAllImages } from "../../assets/functions/storage";
 import loadingAnimation from "../../assets/animation/loading.json";
@@ -22,7 +23,7 @@ export function Home() {
 
       setTimeout(() => {
         setLoading(false);
-      }, 2000);
+      }, 1000);
     };
     getAllPhotos();
   }, []);
@@ -51,7 +52,7 @@ export function Home() {
         {!loading && photos.length > 0 && (
           <PhotoList>
             {photos.map((photo) => (
-              <li>{photo.name}</li>
+              <PhotoItem data={photo} />
             ))}
           </PhotoList>
         )}

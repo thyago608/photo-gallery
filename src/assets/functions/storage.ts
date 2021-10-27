@@ -23,5 +23,3 @@ export const getAllImages = async () => {
 
   return list;
 };
-
-//for in

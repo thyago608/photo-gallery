@@ -1,9 +1,17 @@
 import { Container } from "./styles";
 
-export function PhotoItem() {
+type PhotoItemProps = {
+  data: {
+    name: string;
+    url: string;
+  };
+};
+
+export function PhotoItem({ data}: PhotoItemProps) {
   return (
     <Container>
-      <h1></h1>
+      <img src={data.url} alt={data.name} />
+      <h1>{data.name}</h1>
     </Container>
   );
 }
