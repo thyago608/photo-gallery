@@ -1,6 +1,10 @@
 ## Sobre
 
 A aplicação **Photo Gallery**, é uma galeria de fotos online. Onde é possível o usuário enviar suas fotos favoritas e salvá-las em nuvem.
+Para o desenvolvimento da mesma, foi utilizada a funcionalidade de **Storage** do Firebase, para realizar o armazenamento das imagens.
+A lib Styled-Components foi utilizada para fins de estilizações em nível de componente.
+
+
 
 ---
 
@@ -31,8 +35,5 @@ O projeto foi desenvolvido com as seguintes tecnologias:
     # Executando a aplicação
     $ yarn start
 ```
-
-
-## Visite
 
 Desenvolvido por Thyago Ribeiro 👋
